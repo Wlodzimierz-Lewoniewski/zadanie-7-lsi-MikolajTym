@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 
 def get_data():
-    doc_num = input().strip()
+    doc_num = int(input().strip())
     docs = []
-    for i in range(doc_num+2):
+    for i in range(doc_num+1):
         doc = input().strip()
         docs.append(doc)
     return docs
