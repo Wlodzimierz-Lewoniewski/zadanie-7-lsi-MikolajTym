@@ -36,4 +36,4 @@ Sigma_k = np.diag(Sigma[:k])
 VT_k = VT[:k, :]
 query = C[..., -1] @ VT_k.T @ np.linalg.inv(Sigma_k)
 docs_reduced = U_k @ Sigma_k
-print([round(np.dot(query, doc_reduced) / (np.linalg.norm(query) * np.linalg.norm(doc_reduced)), 2) for doc_reduced in docs_reduced])
+print([round(float(np.dot(query, doc_reduced) / (np.linalg.norm(query) * np.linalg.norm(doc_reduced))), 2) for doc_reduced in docs_reduced])
